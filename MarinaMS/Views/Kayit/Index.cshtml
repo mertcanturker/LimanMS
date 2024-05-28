@@ -1,0 +1,90 @@
+﻿@using EntityLayer.Concrete
+@model List<Tekne>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="top" style="flex-direction: column-reverse;">
+    <div class="tabel-search" style="display: flex; justify-content: center; ">
+        <input type="search" name="" id="" class="form-control" style="width: 400px; " placeholder="Arama">
+        <button type="button" class="btn btn-success">Ara</button>
+    </div>
+<div class="" style="width: 100%; height: 61vh;  margin-top: 30px; overflow-y: auto; ">
+
+    <div style="width:100%; displa"></div>
+    <table class="table">
+        <thead style="position: sticky; top: 0;  ">
+            <tr style="background-color: #E8E2E2;">
+                <th scope="col">#</th>
+                <th scope="col">Tekne</th>
+                <th scope="col">Tekne Sahibi</th>
+                <th scope="col">Bayrağı</th>
+                <th scope="col">Tekne Tipi</th>
+                <th scope="col">Sözleşme Başlangıç </th>
+                <th scope="col">Sözleşme Bitiş </th>
+                
+                <th scope="col">Limanı</th>
+                <th>Durum</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+           @foreach(var item in Model){
+             <tr>
+                <th scope="row">@item.TekneId</th>
+                        <td>@item.TekneIsmi</td>
+                        <td>@item.Isim</td>
+                        <td>@item.TekneBayrak</td>
+                        <td>@item.TekneTipi</td>
+                        <td>@item.TekneSozlesmeBaslangic</td>
+                        <td>@item.TekneSozlesmeBitis</td>
+                        
+                        <td class="text-wrap">@item.TekneLiman</td>
+                <td><button type="button" class="btn btn-success">Aktif</button></td>
+
+                    <td>
+                            <a href="/Kayit/UpdateTekne/@item.TekneId" type="submit" class="btn btn-outline-primary" style="">
+                            Güncelle
+                        </a>
+                    </td>
+                    <td>
+                         <a href="/Kayit/DeleteTekne/@item.TekneId" type="submit" class="btn btn-outline-danger" style="margin-top: 2px;">
+                            Sil
+                        </a>
+                    </td>
+                        <td>
+                            <button class="btn btn-primary" onclick="openJurnalForm(@item.TekneId, '@item.TekneIsmi')">Jurnal Ekle</button>
+                            
+                        </td>
+                <td>
+                    <button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button>
+                </td>
+            </tr>
+                }
+          
+        </tbody>
+    </table>
+
+   
+
+
+</div>
+    <a href="/Kayit/AddTekne/" class="btn-lg btn-primary" style="text-decoration:none; margin-top:50px; display:flex; width:16%; justify-content:center;">Yeni Tekne Ekle</a>
+   
+</div>
+
+<script>
+    function openJurnalForm(tekneId, tekneIsim) {
+        var url = '@Url.Action("AddJurnal", "Jurnal")' + '?tekneId=' + tekneId + '&TekneIsmi=' + encodeURIComponent(tekneIsim);
+        window.location.href = url;
+    }
+</script>
+
+

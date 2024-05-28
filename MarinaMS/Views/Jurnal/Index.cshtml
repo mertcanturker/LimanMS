@@ -1,0 +1,111 @@
+﻿@using EntityLayer.Concrete
+@model List<Jurnal>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content" style="background-color: #FFFF;  min-width:95%;">
+    <div style="margin-bottom: 20px;">
+        <h5>Jurnal İşlemeri</h5>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="">Jurnal Tipi</label>
+            <select name="" id="" class="form-select">
+                <option value="" selected>Jurnal Tipi</option>
+                <option value="1">Deniz Giriş</option>
+                <option value="2">Deniz Çıkış</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="">Giriş Tarihi</label>
+            <input type="date" class="form-control">
+        </div>
+        <div class="col">
+            <label for="">Giriş Tarihi</label>
+            <input type="date" class="form-control">
+        </div>
+    </div>
+    <!-- table -->
+    <div class="" style="width: 100%; height: 51vh;  margin-top: 40px; overflow-y: auto; ">
+        <table class="table">
+            <thead style="position: sticky; top: 0;  ">
+                <tr style="background-color: #E8E2E2;">
+                    <th scope="col">#</th>
+                    <th scope="col">Tekne</th>
+                    <th scope="col">Jurnal Tipi</th>
+                    <th scope="col">Hareket Tipi</th>
+                    <th scope="col">Hareket Tarihi</th>
+                    <th scope="col">Harekat Saati</th>
+                    <th scope="col">Dönüş Tarihi</th>
+                    <th scope="col">Dönüş Saati</th>
+                    <th></th>
+                    
+                   <th></th>
+                    <th></th>
+
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model){
+                <tr>
+                    <th scope="row">@item.JurnalId</th>
+                    <td>@item.TekneIsmi</td>
+                        <td>@item.JurnalTipi</td>
+                    <td>@item.HareketTipi</td>
+                    <td>@item.HareketTarihi</td>
+                    <td>@item.HareketSaati</td>
+                    <td>@item.DonusTarihi</td>
+                    <td>@item.DonusSaati</td>
+                    
+                    <td>
+                        <button type="submit" class="btn btn-success" style="">
+                            Aktif
+                        </button>
+                    </td>
+                    <td>
+                            <a href="/Jurnal/UpdateJurnal/@item.JurnalId" type="submit" class="btn btn-outline-primary" style="">
+                            Güncelle
+                        </a>
+                    </td>
+                    <td>
+                            <a href="/Jurnal/DeleteJurnal/@item.JurnalId" type="submit" class="btn btn-outline-danger" style="margin-top: 2px;">
+                            Sil
+                        </a>
+                    </td>
+                    <td>
+                        <button type="submit" class="" style="margin-top: 2px;">
+                            <i class='bx bx-copy-alt'></i>
+                        </button>
+                    </td>
+                </tr>
+                }
+               
+
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- table -->
+    <a href="/Jurnal/AddJurnal/" style="text-decoration:none;" class="btn-lg btn-primary">
+    Yeni Jurnal Ekle
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

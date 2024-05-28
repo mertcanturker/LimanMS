@@ -1,0 +1,202 @@
+﻿@model EntityLayer.Concrete.Tekne
+@{
+    ViewData["Title"] = "AddTekne";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="margin-top: 10px; margin-left: 40px; margin-bottom: 30px;">Kayıt Formu</h3>
+<div class="container" style="max-width: 200vh; height: 100vh;  margin-top: 20px;">
+    <form  method="post" >
+    <div class="row" style="margin-bottom: 2%;">
+        <div class="col">
+            <label for="">İsim</label>
+            <input type="text"   class="form-control" placeholder="İsim" asp-for="Isim">
+        </div>
+
+            <div class="col">
+                <label for="">Uyruk</label>
+                <select asp-for="Uyruk" asp-items=@(new List<SelectListItem>{
+                        new SelectListItem { Text = "Seçiniz", Value = "" },
+                        new SelectListItem { Text = "Türkiye", Value = "Türkiye" },
+                        new SelectListItem { Text = "Fransa", Value = "Fransız" },
+                        new SelectListItem { Text = "Yunanistan", Value = "Yunanistan" },
+                        }) ) class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+       
+        <div class="col">
+            <label for="">Tekne İsmi</label>
+            <input type="text"   class="form-control" placeholder="Tekne İsmi" asp-for="TekneIsmi">
+        </div>
+
+        <div class="col">
+            <label for="">Tekne Tipi</label>
+            <select asp-for="TekneTipi" asp-items=@(new List<SelectListItem>{
+                    new SelectListItem { Text = "Gulet", Value = "Gulet" },
+                    new SelectListItem { Text = "Yelkenli", Value = "Yelkenli" },
+                    new SelectListItem { Text = "Motoryat", Value = "Motoryat" },
+                    }) ) class="form-control">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+            <div class="col">
+                <label for="">Telefon Numarası</label>
+                <input type="text"  class="form-control" placeholder="+X (XXX) XXX XXXX" asp-for="TelefonNo">
+            </div>
+        <div class="col">
+            <label for="">Kimlik/Pasaport Numarası</label>
+            <input type="text" class="form-control" asp-for="Kimlik">
+        </div>
+        <div class="col">
+            <label for="">Bayrak</label>
+                <select asp-for="TekneBayrak" asp-items=@(new List<SelectListItem>{
+                        new SelectListItem { Text = "Seçiniz", Value = "" },
+                        new SelectListItem { Text = "Türkiye", Value = "Türkiye" },
+                        new SelectListItem { Text = "Fransa", Value = "Fransız" },
+                        new SelectListItem { Text = "Yunanistan", Value = "Yunanistan" },
+                        }) ) class="form-control">
+                    <option value=""></option>
+                </select>
+        </div>
+        <div class="col">
+            <label for="">Tekne Durumu</label>
+                <select asp-for="TekneDurumu" asp-items=@(new List<SelectListItem>{
+                        new SelectListItem { Text = "Seçiniz", Value = "" },
+                        new SelectListItem { Text = "Sivil", Value = "Sivil" },
+                        new SelectListItem { Text = "Ticari", Value = "Ticari" },
+                        
+                        }) ) class="form-control">
+                    <option value=""></option>
+                </select>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+            <div class="col">
+                <label for="">Adres</label>
+                <input type="text"   class="form-control" placeholder="Adres" asp-for="Adres">
+            </div>
+        <div class="col">
+            <label for="">Email</label>
+            <input type="email"   class="form-control" placeholder="Email" asp-for="Email">
+        </div>
+        <div class="col">
+            <label for="">Ruhsat Numarası</label>
+            <input type="text"  class="form-control" placeholder="Ruhsat No" asp-for="TekneRuhsatNo" asp-area="">
+        </div>
+
+        <div class="col">
+            <label for="">Bağlı Olduğu liman</label>
+            <input type="text"   class="form-control" placeholder="Liman İsmi" asp-for="TekneLiman">
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+
+            <div class="col">
+                <label for="">Personel İsim</label>
+                <input type="text"   class="form-control" placeholder="İsim" asp-for="PersonelIsim">
+            </div>
+
+            <div class="col">
+                <label for="">Personel Uyruk</label>
+                <select asp-for="PersonelUyruk" asp-items=@(new List<SelectListItem>{
+                        new SelectListItem { Text = "Seçiniz", Value = "" },
+                        new SelectListItem { Text = "Türkiye", Value = "Türkiye" },
+                        new SelectListItem { Text = "Fransa", Value = "Fransa" },
+                        new SelectListItem { Text = "Yunanistan", Value = "Yunanistan" },
+                        }) class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+       
+        <div class="col-1">
+            <label for="">En</label>
+            <input type="text"   class="form-control" placeholder="En" asp-for="TekneEn">
+        </div>
+        <div class="col-1">
+            <label for="">Boy</label>
+            <input type="text"   class="form-control" placeholder="Boy" asp-for="TekneBoy">
+        </div>
+        <div class="col-1">
+            <label for="">Derinlik</label>
+            <input type="text"   class="form-control" placeholder="Derinlik" asp-for="TekneDerinlik">
+        </div>
+        <div class="col-1">
+            <label for="">m²</label>
+            <input type="text"   class="form-control" placeholder="m²" asp-for="TekneMetreKare">
+        </div>
+        <div class="col-1">
+            <label for="">İskele</label>
+            <select  class="form-select"  asp-for="Iskele">
+                <option value="" selected>iskele</option>
+                <option value="1">ANM</option>
+                <option value="2">A</option>
+                <option value="3">B</option>
+                <option value="4">C</option>
+                <option value="5">D</option>
+                <option value="6">E</option>
+                <option value="7">KP</option>
+
+            </select>
+        </div>
+        <div class="col-1">
+            <label for="">İskele No</label>
+            <select  class="form-select"  asp-for="IskeleNo">
+                <option value="" selected>iskele no</option>
+                <option value="1">Sivil</option>
+                <option value="2">Ticari</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+            
+            <div class="col">
+                <label for="">Personel Ehliyet No</label>
+                <input type="text" class="form-control" placeholder="Soyisim" asp-for="PersonelEhliyetNo">
+            </div>
+            <div class="col-3">
+                <label for="">Telefon Numarası</label>
+                <input type="text" class="form-control" placeholder="+X (XXX) XXX XXXX" asp-for="PersonelTelefonNo">
+            </div>
+        <div class="col">
+            <label for="">Sigorta Poliçe Numarası</label>
+            <input type="text"  class="form-control" placeholder="Sigorta No" asp-for="TekneSigortaNo">
+        </div>
+
+        <div class="col">
+            <label for="">Sigort Geçerlilik Tarihi</label>
+            <input type="date"   class="form-control" asp-for="TekneSigortaTarihi">
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+
+            <div class="col-3">
+                <label for="">Email</label>
+                <input type="text" class="form-control" placeholder="Email" asp-for="PersonelEmail">
+            </div>
+            <div class="col"></div>
+        <div class="col">
+            <label for="">Giriş Tarihi</label>
+            <input type="date"   class="form-control" asp-for="TekneSozlesmeBaslangic">
+        </div>
+
+        <div class="col">
+            <label for="">Çıkış Tarihi</label>
+            <input type="date"   class="form-control" asp-for="TekneSozlesmeBitis">
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+       
+        
+    </div>
+    <div class="row" style="display: flex; justify-content: end;">
+
+        <button class="btn btn-primary" style="width: 200px; height: 40px;">Kaydet</button>
+
+    </div>
+    </form>
+</div>
+

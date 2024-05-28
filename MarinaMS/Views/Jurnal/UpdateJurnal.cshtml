@@ -1,0 +1,76 @@
+﻿@model EntityLayer.Concrete.Jurnal
+
+
+@{
+    ViewData["Title"] = "AddJurnal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="" class="container">
+
+    <h5 style="margin-top: 30px;">Jurnal Kayıt</h5>
+    <form method="post">
+        @Html.HiddenFor(x => x.JurnalId)
+
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col">
+
+                <label for="">Tekne Id</label>
+                <input type="text" class="form-control" placeholder="Tekne Id" asp-for="TekneId" readonly>
+            </div>
+            <div class="col">
+                <label for="TekneIsmi">Tekne İsmi</label>
+                <input type="text" class="form-control" placeholder="Tekne İsmi" asp-for="TekneIsmi" readonly>
+            </div>
+            <div class="col">
+                <label for="">Jurnal Tipi</label>
+                <select asp-for="JurnalTipi" asp-items=@(new List<SelectListItem>{
+                        new SelectListItem { Text = "Jurnal Tipi", Value = "" },
+                        new SelectListItem { Text = "Kara", Value = "Kara" },
+                        new SelectListItem { Text = "Deniz", Value = "Deniz" },
+                        }) ) class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col">
+
+                <label for="">Hareket Tarihi</label>
+                <input type="date" class="form-control" placeholder="Tekne Id" asp-for="HareketTarihi">
+            </div>
+            <div class="col">
+                <label for="">Hareket Saati</label>
+                <input type="time" class="form-control" asp-for="HareketSaati">
+            </div>
+            <div class="col">
+                <label for="">Hareket Tipi</label>
+                <select asp-for="HareketTipi" asp-items=@(new List<SelectListItem>{
+                        new SelectListItem { Text = "Hareket Tipi", Value = "" },
+                        new SelectListItem { Text = "Deniz Giriş", Value = "Deniz Giriş" },
+                        new SelectListItem { Text = "Deniz Çıkış", Value = "Deniz Çıkış" },
+                        }) ) class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <label for="">Dönüş Tarihi</label>
+                <input type="date" class="form-control" placeholder="" asp-for="DonusTarihi">
+            </div>
+            <div class="col">
+                <label for="">Dönüş Saati</label>
+                <input type="time" class="form-control" asp-for="DonusSaati">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="" style="margin-top: 30px; display: flex; justify-content: end;">
+            <button type="submit" class="btn btn-primary" style="width: 130px; height: 50px;">Kaydet</button>
+        </div>
+    </form>
+
+</div>
+

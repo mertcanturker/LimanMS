@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mertc\\Desktop\\MarinaMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5187B57C-3CCA-4FD0-B5B9-ECCF8C1AB5ED}|MarinaMS\\MarinaMS.csproj|c:\\users\\mertc\\desktop\\marinams\\marinams\\views\\jurnal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5187B57C-3CCA-4FD0-B5B9-ECCF8C1AB5ED}|MarinaMS\\MarinaMS.csproj|solutionrelative:marinams\\views\\jurnal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C180F69D-CCCA-4D2C-BE78-91DC3A5BEC28}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\mertc\\desktop\\marinams\\dataaccesslayer\\concrete\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C180F69D-CCCA-4D2C-BE78-91DC3A5BEC28}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\concrete\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5187B57C-3CCA-4FD0-B5B9-ECCF8C1AB5ED}|MarinaMS\\MarinaMS.csproj|c:\\users\\mertc\\desktop\\marinams\\marinams\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5187B57C-3CCA-4FD0-B5B9-ECCF8C1AB5ED}|MarinaMS\\MarinaMS.csproj|solutionrelative:marinams\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\mertc\\Desktop\\MarinaMS\\DataAccessLayer\\Concrete\\Context.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Concrete\\Context.cs",
+              "ToolTip": "C:\\Users\\mertc\\Desktop\\MarinaMS\\DataAccessLayer\\Concrete\\Context.cs",
+              "RelativeToolTip": "DataAccessLayer\\Concrete\\Context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T19:23:26.15Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mertc\\Desktop\\MarinaMS\\MarinaMS\\Program.cs",
+              "RelativeDocumentMoniker": "MarinaMS\\Program.cs",
+              "ToolTip": "C:\\Users\\mertc\\Desktop\\MarinaMS\\MarinaMS\\Program.cs",
+              "RelativeToolTip": "MarinaMS\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T20:24:44.828Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\mertc\\Desktop\\MarinaMS\\MarinaMS\\Views\\Jurnal\\Index.cshtml",
+              "RelativeDocumentMoniker": "MarinaMS\\Views\\Jurnal\\Index.cshtml",
+              "ToolTip": "C:\\Users\\mertc\\Desktop\\MarinaMS\\MarinaMS\\Views\\Jurnal\\Index.cshtml",
+              "RelativeToolTip": "MarinaMS\\Views\\Jurnal\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-25T21:42:10.265Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

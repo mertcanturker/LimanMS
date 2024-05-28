@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LimanMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<style>
+   .container{
+    
+    height: 100vh;
+    display: flex;
+    
+    
+   }
+   .sidebar{
+    height: 100vh;
+    width: 27%;
+    background-color: #FFFF;
+    
+    display: block;
+    padding: 15px;
+    position: sticky;
+   }
+   .content{
+    height: 100vh;
+    width: 73%;
+    background-color: #FFFF;
+    padding: 30px;
+    padding-bottom: 80px;
+    overflow: auto;
+    
+   }
+   .list-content{
+    display: flex;
+    font-weight: 500;
+    font-size: medium;
+    gap: 35px;
+    color: #7D7C7C;
+    margin-bottom: 12px;
+    
+   }
+   #liste{
+    margin-top: 25px;
+    padding: 20px;
+   }
+   .baslik{
+    font-weight: 500;
+    margin-bottom: 35px;
+   }
+   .icerik{
+    margin-bottom: 35px;
+
+   }
+   .search-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   }
+   
+   
+  
+</style>
+<body style=" background-image: url('xx.jpg'); background-size: cover;  ">
+    <div class="container" style="min-width: 95%;">
+     
+        <aside class="sidebar border-right">
+            <div class="search-group">
+            <input type="search" class="form-control"  placeholder="Arama">
+            <button type="button" class="btn btn-success" >Ara</button>
+            </div>
+            <h6 style="margin-top: 40px;">Seçilen Tekne Bilgisi</h6>
+            <div class=" row " id="liste">
+               
+                <div class="col-4">
+                    <label class="baslik" for="">Tekne Id</label>
+                    <label class="baslik" for="">Tekne </label>
+                    <br>
+                    <label class="baslik" for="">En</label>
+                    <br>
+                    <label class="baslik" for="">Boy</label>
+                    <label class="baslik" for="">Metrekare</label>
+                    <label class="baslik" for="">Tekne Tipi</label>
+                    <label class="baslik" for="">Tekne Sahibi</label>
+                    <label class="baslik" for="">Bayrağı</label>
+                </div>
+                <div class="col-8" style="display: flex; flex-direction: column;">
+                    <label class="text-truncate  icerik" for="">123456</label>
+                     <label class="text-truncate icerik" for="">Mertcam</label>
+                      <label class="text-truncate icerik" for="">Mertcam Eni</label>
+                       <label class="text-truncate icerik" for="">Mertcam boyu</label>
+                        <label class="text-truncate icerik" for="">Mertcam karesi</label>
+                         <label class="text-truncate icerik" for="">Mertcam tipi</label>
+                          <label class="text-truncate icerik" for="">Mertcam</label>
+                           <label class="text-truncate icerik" for="">Mertcam bayrağı</label>
+                </div>
+            </div>
+        </aside>
+        <div class="content border-4 border-black">
+            <div style="margin-bottom: 30px;">
+            <h5>Jurnal İşlemeri</h5>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="">Jurnal Tipi</label>
+                    <select name="" id="" class="form-select">
+                        <option value="" selected>Jurnal Tipi</option>
+                        <option value="1">Deniz Giriş</option>
+                        <option value="2">Deniz Çıkış</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="">Giriş Tarihi</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col">
+                    <label for="">Giriş Tarihi</label>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <!-- table -->
+              <div class="" style="width: 100%; height: 53vh;  margin-top: 60px; overflow-y: auto; ">
+        <table class="table">
+            <thead style="position: sticky; top: 0;  ">
+                <tr style="background-color: #E8E2E2;">
+                    <th scope="col">#</th>
+                    <th scope="col">Tekne</th>
+                    <th scope="col">Jurnal Tipi</th>
+                    <th scope="col">Hareket Tipi</th>
+                    <th scope="col">Hareket Tarihi</th>
+                    <th scope="col">Harekat Saati</th>
+                    <th scope="col">Dönüş Tarihi</th>
+                    <th scope="col">Dönüş Saati</th>
+                    
+                    
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+                 <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+                 <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+                 <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+                 <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+                 <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+                 <tr>
+                    <th scope="row">1</th>
+                    <td>mertcam</td>
+                    <td>Mertcam Türkmer</td>
+                    <td>Mertcam Ülkesi</td>
+                    <td>Mertcam Tipi</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    <td>21.21.2121</td>
+                    
+                    
+                    <td><button type="submit" class="" style="margin-top: 2px;">
+                        <i class='bx bx-copy-alt'></i>
+                    </button></td>
+                </tr>
+               
+            </tbody>
+        </table>
+        
+        
+        </div>
+            <!-- table -->
+            <h5 style="margin-top: 30px;">Jurnal Kayıt</h5>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col">
+                    
+                    <label for="">Tekne Id</label>
+                    <input type="text" class="form-control" placeholder="Tekne Id">
+                </div>
+                <div class="col">
+                    <label for="">Tekne İsmi</label>
+                    <input type="text" class="form-control" placeholder="Tekne İsmi">
+                </div>
+                <div class="col">
+                    <label for="">Jurnal Tipi</label>
+                    <select name="" class="form-select" id="">
+                        <option value="" selected>Jurnal Tipi</option>
+                        <option value="1">Deniz Giriş</option>
+                        <option value="2">Deniz çıkış</option>
+                    </select>
+                </div>
+            </div>
+             <div class="row" style="margin-bottom: 20px;">
+                <div class="col">
+                    
+                    <label for="">Hareket Tarihi</label>
+                    <input type="date" class="form-control" placeholder="Tekne Id">
+                </div>
+                <div class="col">
+                    <label for="">Hareket Saati</label>
+                    <input type="time" class="form-control" >
+                </div>
+                <div class="col">
+                    <label for="">Hareket Tipi</label>
+                    <select name="" class="form-select" id="">
+                        <option value="" selected>Hareket Tipi</option>
+                        <option value="1">Deniz Giriş</option>
+                        <option value="2">Deniz çıkış</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    
+                    <label for="">Dönüş Tarihi</label>
+                    <input type="date" class="form-control" placeholder="Tekne Id">
+                </div>
+                <div class="col">
+                    <label for="">Dönüş Saati</label>
+                    <input type="time" class="form-control" >
+                </div>
+                <div class="col">
+                   
+                </div>
+            </div>
+            <div class="" style="margin-top: 30px; display: flex; justify-content: end;">
+                <button class="btn btn-primary" style="width: 130px; height: 50px;">Kaydet</button>
+            </div>
+        </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
